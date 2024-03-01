@@ -1,6 +1,16 @@
+import 'package:expirochef/Authentication/AuthPage.dart';
+import 'package:expirochef/Authentication/LoginScreen.dart';
+import 'package:expirochef/Authentication/SplashScreen.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+Future main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  if (kIsWeb) {
+    await Firebase.initializeApp(options: FirebaseOptions(apiKey: "AIzaSyCmNtHAdY9Zzei48UYfJyH6mrzySbNrEHk", appId: "1:687596960814:web:6cc8888f46d62f166ff3bf", messagingSenderId: "687596960814", projectId: "expirochef"));
+  }
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -31,7 +41,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: SplashScreen(
+        child: AuthPage(),
+      )
     );
   }
 }

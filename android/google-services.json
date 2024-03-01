@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "687596960814",
+    "project_id": "expirochef",
+    "storage_bucket": "expirochef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:687596960814:android:a1ad70e9a0b36ed86ff3bf",
+        "android_client_info": {
+          "package_name": "com.example.expirochef"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-d9q49XxSfjpDozcMnwwmw36HoDBoNsA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
